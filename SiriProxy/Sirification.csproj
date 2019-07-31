@@ -123,6 +123,7 @@
     <AdditionalFiles Include="Files\RawMagicCode">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
+    <None Include="Readme.md" />
     <None Include="Resources\TexnomicCA.pfx" />
     <None Include="Resources\AppleRawHeaders" />
     <None Include="Resources\RawMagicCode" />
@@ -185,6 +186,7 @@
     <AdditionalFiles Include="Files\Siri Server.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
+    <Content Include="Database.sql" />
     <Content Include="System Preferences.ico" />
   </ItemGroup>
   <ItemGroup />
