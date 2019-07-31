@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Runtime.Serialization.Plists</name>
+    </assembly>
+    <members>
+        <member name="T:System.Runtime.Serialization.Plists.BinaryPlistArray">
+            <summary>
+            Represents an array value in a binary plist.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistArray.#ctor(System.Collections.Generic.IList{System.Runtime.Serialization.Plists.BinaryPlistItem})">
+            <summary>
+            Initializes a new instance of the BinaryPlistArray class.
+            </summary>
+            <param name="objectTable">A reference to the binary plist's object table.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistArray.#ctor(System.Collections.Generic.IList{System.Runtime.Serialization.Plists.BinaryPlistItem},System.Int32)">
+            <summary>
+            Initializes a new instance of the BinaryPlistArray class.
+            </summary>
+            <param name="objectTable">A reference to the binary plist's object table.</param>
+            <param name="size">The size of the array.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistArray.ToArray">
+            <summary>
+            Converts this instance into an <see cref="T:object[]"/> array.
+            </summary>
+            <returns>The <see cref="T:object[]"/> array representation of this instance.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistArray.ToString">
+            <summary>
+            Returns the string representation of this instance.
+            </summary>
+            <returns>This instance's string representation.</returns>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistArray.ObjectReference">
+            <summary>
+            Gets the array's object reference collection.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistArray.ObjectTable">
+            <summary>
+            Gets a reference to the binary plist's object table.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.BinaryPlistDictionary">
+            <summary>
+            Represents a dictionary in a binary plist.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistDictionary.#ctor(System.Collections.Generic.IList{System.Runtime.Serialization.Plists.BinaryPlistItem},System.Int32)">
+            <summary>
+            Initializes a new instance of the BinaryPlistDictionary class.
+            </summary>
+            <param name="objectTable">A reference to the binary plist's object table.</param>
+            <param name="size">The size of the dictionay.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistDictionary.ToDictionary">
+            <summary>
+            Converts this instance into a <see cref="T:System.Collections.Generic.Dictionary`2"/>.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"/> representation this instance.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistDictionary.ToString">
+            <summary>
+            Returns the string representation of this instance.
+            </summary>
+            <returns>This instance's string representation.</returns>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistDictionary.KeyReference">
+            <summary>
+            Gets the dictionary's key reference collection.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistDictionary.ObjectReference">
+            <summary>
+            Gets the dictionary's object reference collection.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistDictionary.ObjectTable">
+            <summary>
+            Gets a reference to the binary plist's object table.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.BinaryPlistReader">
+            <summary>
+            Performs de-serialization of binary plists.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.#ctor">
+            <summary>
+            Initializes a new instance of the BinaryPlistReader class.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadObject(System.String)">
+            <summary>
+            Reads a binary plist from the given file path into an <see cref="T:System.Collections.IDictionary"/>.
+            </summary>
+            <param name="path">The path of the file to read.</param>
+            <returns>The result plist <see cref="T:System.Collections.IDictionary"/>.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadObject(System.IO.Stream)">
+            <summary>
+            Reads a binary plist from the given stream into an <see cref="T:System.Collections.IDictionary"/>.
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to read.</param>
+            <returns>The result plist <see cref="T:System.Collections.IDictionary"/>.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadObject``1(System.String)">
+            <summary>
+            Reads a binary plist from the given file path into a new <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object instance.
+            </summary>
+            <typeparam name="T">The concrete <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> type to create.</typeparam>
+            <param name="path">The path of the file to read.</param>
+            <returns>The result <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object instance.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadObject``1(System.IO.Stream)">
+            <summary>
+            Reads a binary plist from the given stream into a new <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object instance.
+            </summary>
+            <typeparam name="T">The concrete <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> type to create.</typeparam>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to read.</param>
+            <returns>The result <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object instance.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadAsciiString(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads an ASCII string value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the ASCII string value from.</param>
+            <param name="index">The index in the stream the string value starts at.</param>
+            <param name="size">The number of bytes that make up the string value.</param>
+            <returns>A string value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadData(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a data value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the data value from.</param>
+            <param name="index">The index in the stream the data value starts at.</param>
+            <param name="size">The number of bytes that make up the data value.</param>
+            <returns>A data value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadDate(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a date value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the date value from.</param>
+            <param name="index">The index in the stream the date value starts at.</param>
+            <param name="size">The number of bytes that make up the date value.</param>
+            <returns>A date value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadInteger(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads an integer value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the integer value from.</param>
+            <param name="index">The index in the stream the integer value starts at.</param>
+            <param name="size">The number of bytes that make up the integer value.</param>
+            <returns>An integer value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadPrimitive(System.IO.BinaryReader,System.Int64,System.Nullable{System.Boolean}@)">
+            <summary>
+            Reads a primitive (true, false or null) value from the given reader, starting at the given index.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the primitive value from.</param>
+            <param name="index">The index in the stream the value starts at.</param>
+            <param name="primitive">Contains the read primitive value upon completion.</param>
+            <returns>True if a value was read, false if the value was a fill byte.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadReal(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a floating-point value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the floating-point value from.</param>
+            <param name="index">The index int he stream the floating-point value starts at.</param>
+            <param name="size">The number of bytes that make up the floating-point value.</param>
+            <returns>A floating-point value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadUnicodeString(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a Unicode string value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the Unicode string value from.</param>
+            <param name="index">The index in the stream the string value starts at.</param>
+            <param name="size">The number of characters that make up the string value.</param>
+            <returns>A string value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadUniqueId(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a unique ID value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the unique ID value from.</param>
+            <param name="index">The index in the stream the unique ID value starts at.</param>
+            <param name="size">The number of bytes that make up the unique ID value.</param>
+            <returns>A unique ID value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadArray(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads an array value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the array value from.</param>
+            <param name="index">The index in the stream the array value starts at.</param>
+            <param name="size">The number of items in the array.</param>
+            <returns>An array value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadDictionary(System.IO.BinaryReader,System.Int64,System.Int32)">
+            <summary>
+            Reads a dictionary value from the given reader, starting at the given index and of the given size.
+            </summary>
+            <param name="reader">The <see cref="T:System.IO.BinaryReader"/> to read the dictionary value from.</param>
+            <param name="index">The index in the stream the dictionary value starts at.</param>
+            <param name="size">The number of items in the dictionary.</param>
+            <returns>A dictionary value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadObjectTable(System.IO.BinaryReader)">
+            <summary>
+            Reads the object table from the given reader.
+            </summary>
+            <param name="reader">The reader to read the object table from.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.ReadOffsetTable(System.IO.BinaryReader)">
+            <summary>
+            Reads the offset table from the given reader.
+            </summary>
+            <param name="reader">The reader to read the offset table from.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistReader.Reset">
+            <summary>
+            Resets this instance's state.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.BinaryPlistWriter">
+            <summary>
+            Performs serialization of objects into binary plist format.
+            </summary>
+        </member>
+        <member name="F:System.Runtime.Serialization.Plists.BinaryPlistWriter.HeaderMagicNumber">
+            <summary>
+            Gets the magic number value used in a binary plist header.
+            </summary>
+        </member>
+        <member name="F:System.Runtime.Serialization.Plists.BinaryPlistWriter.HeaderVersionNumber">
+            <summary>
+            Gets the version number value used in a binary plist header.
+            </summary>
+        </member>
+        <member name="F:System.Runtime.Serialization.Plists.BinaryPlistWriter.ReferenceDate">
+            <summary>
+            Gets Apple's reference date value.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.#ctor">
+            <summary>
+            Initializes a new instance of the BinaryPlistWriter class.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteObject(System.String,System.Runtime.Serialization.Plists.IPlistSerializable)">
+            <summary>
+            Writes the specified <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object to the given file path as a binary plist.
+            </summary>
+            <param name="path">The file path to write to.</param>
+            <param name="obj">The <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteObject(System.IO.Stream,System.Runtime.Serialization.Plists.IPlistSerializable)">
+            <summary>
+            Writes the specified <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object to the given stream as a binary plist.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="obj">The <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> object to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteObject(System.String,System.Collections.IDictionary)">
+            <summary>
+            Writes the specified <see cref="T:System.Collections.IDictionary"/> object to the given file path as a binary plist.
+            </summary>
+            <param name="path">The file path to write to.</param>
+            <param name="dictionary">The <see cref="T:System.Collections.IDictionary"/> object to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteObject(System.IO.Stream,System.Collections.IDictionary)">
+            <summary>
+            Writes the specified <see cref="T:System.Collections.IDictionary"/> object to the given stream as a binary plist.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="dictionary">The <see cref="T:System.Collections.IDictionary"/> object to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddIntegerCount(System.Collections.Generic.IList{System.Byte},System.Int32)">
+            <summary>
+            Adds an integer count to the given buffer.
+            </summary>
+            <param name="buffer">The buffer to add the integer count to.</param>
+            <param name="count">A count value to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.GetIntegerBytes(System.Int64)">
+            <summary>
+            Gets a big-endian byte array that corresponds to the given integer value.
+            </summary>
+            <param name="value">The integer value to get bytes for.</param>
+            <returns>A big-endian byte array.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteReferenceInteger(System.IO.BinaryWriter,System.Int64,System.Int32)">
+            <summary>
+            Writes the given value using the number of bytes indicated by the specified size
+            to the given <see cref="T:System.IO.BinaryWriter"/>.
+            </summary>
+            <param name="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
+            <param name="value">The value to write.</param>
+            <param name="size">The size of the integer to write.</param>
+            <returns>The number of bytes written.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddArray(System.Collections.IEnumerable)">
+            <summary>
+            Adds an array to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddData(System.Object)">
+            <summary>
+            Adds arbitrary data to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddDate(System.DateTime)">
+            <summary>
+            Adds a date to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddDictionary(System.Collections.IDictionary)">
+            <summary>
+            Adds a dictionary to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddDouble(System.Double)">
+            <summary>
+            Adds a double to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddFloat(System.Single)">
+            <summary>
+            Adds a float to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddInteger(System.Int64)">
+            <summary>
+            Adds an integer to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddObject(System.Object)">
+            <summary>
+            Adds an object to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddPrimitive(System.Nullable{System.Boolean})">
+            <summary>
+            Adds a primitive to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.AddString(System.String)">
+            <summary>
+            Adds a string to the internal object table.
+            </summary>
+            <param name="value">The value to add.</param>
+            <returns>The index of the added value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.CalculateObjectRefSize">
+            <summary>
+            Calculates the object ref size to use for this instance's current state.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.Reset">
+            <summary>
+            Resets this instance's state.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteArray(System.IO.BinaryWriter,System.Runtime.Serialization.Plists.BinaryPlistItem)">
+            <summary>
+            Writes an array item to the given <see cref="T:System.IO.BinaryWriter"/>.
+            </summary>
+            <param name="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
+            <param name="value">The array item to write.</param>
+            <returns>The number of bytes written.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteDictionary(System.IO.BinaryWriter,System.Runtime.Serialization.Plists.BinaryPlistItem)">
+            <summary>
+            Writes a dictionary item to the given <see cref="T:System.IO.BinaryWriter"/>.
+            </summary>
+            <param name="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
+            <param name="value">The dictionary item to write.</param>
+            <returns>The number of bytes written.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistWriter.WriteObjectTable(System.IO.BinaryWriter)">
+            <summary>
+            Write the object table to the given <see cref="T:System.IO.BinaryWriter"/>.
+            </summary>
+            <param name="writer">The <see cref="T:System.IO.BinaryWriter"/> to write to.</param>
+            <returns>The number of bytes written.</returns>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.BinaryPlistItem">
+            <summary>
+            Represents an item in a binary plist's object table.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistItem.#ctor">
+            <summary>
+            Initializes a new instance of the BinaryPlistItem class.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistItem.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the BinaryPlistItem class.
+            </summary>
+            <param name="value">The value of the object the item represents.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistItem.SetByteValue(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            Sets the <see cref="P:System.Runtime.Serialization.Plists.BinaryPlistItem.ByteValue"/> to the given collection.
+            </summary>
+            <param name="buffer">The collection to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.BinaryPlistItem.ToString">
+            <summary>
+            Gets the string representation of this instance.
+            </summary>
+            <returns>The string representation of this instance.</returns>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.ByteValue">
+            <summary>
+            Gets the item's byte value collection.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.IsArray">
+            <summary>
+            Gets or sets a value indicating whether this item represents an array.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.IsDictionary">
+            <summary>
+            Gets or sets a value indicating whether this item represents a dictionary.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.Marker">
+            <summary>
+            Gets the item's marker value collection.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.Size">
+            <summary>
+            Gets the item's size, which is a sum of the <see cref="P:System.Runtime.Serialization.Plists.BinaryPlistItem.Marker"/> and <see cref="P:System.Runtime.Serialization.Plists.BinaryPlistItem.ByteValue"/> lengths.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.BinaryPlistItem.Value">
+            <summary>
+            Gets or sets the object value this item represents.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer">
+            <summary>
+            Serializes data contracts to and from the binary plist format.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the DataContractBinaryPlistSerializer class.
+            </summary>
+            <param name="type">The type of the instances that are serialized or de-serialized.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer.ReadObject(System.IO.Stream)">
+            <summary>
+            Reads an object from the specified stream.
+            </summary>
+            <param name="stream">The stream to read from.</param>
+            <returns>The de-serialized object.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer.WriteObject(System.IO.Stream,System.Object)">
+            <summary>
+            Writes the complete contents of the given object to the specified stream.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="graph">The object to write.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer.GetReadablePlistObject(System.Type,System.Object)">
+            <summary>
+            Gets the readable plist value of the given object identified by the specified type.
+            </summary>
+            <param name="type">The type the object is expected to have after being de-serialized.</param>
+            <param name="obj">The raw plist object value.</param>
+            <returns>A readable plist object value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer.GetWritablePlistObject(System.Type,System.Object)">
+            <summary>
+            Gets the writable plist value of the given object identified by the specified type.
+            </summary>
+            <param name="type">The of the object.</param>
+            <param name="obj">The object to get the plist value of.</param>
+            <returns>The plist value of the given object.</returns>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.EndianConverter">
+            <summary>
+            Converts the endian-ness of primitive number types.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.Int16)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.UInt16)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.Int32)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.UInt32)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.Int64)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapEndian(System.UInt64)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapInt16(System.Int16)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapInt32(System.Int32)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapInt64(System.Int64)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapUInt32(System.UInt32)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapUInt16(System.UInt16)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.SwapUInt64(System.UInt64)">
+            <summary>
+            Swaps the endian-ness of the given value.
+            </summary>
+            <param name="value">The value to swap the endian-ness of.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.UInt16)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.Int16)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.UInt32)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.Int32)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.UInt64)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToBigEndianConditional(System.Int64)">
+            <summary>
+            Gets the big-endian value of the given value if the current system is little-endian.
+            If the curreng system is big-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.UInt16)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.Int16)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.UInt32)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.Int32)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.UInt64)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.EndianConverter.ToLittleEndianConditional(System.Int64)">
+            <summary>
+            Gets the little-endian value of the given value if the current system is big-endian.
+            If the curreng system is little-endian, returns the value as-is.
+            </summary>
+            <param name="value">The value to swap if necessary.</param>
+            <returns>The resulting value.</returns>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.Extensions">
+            <summary>
+            Extensions and helpers for plist serialization.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.GetConcreteTypeIfNullable(System.Type)">
+            <summary>
+            Gets the specified type's concrete type of it is an instance of <see cref="T:System.Nullable`1"/>.
+            If the type is not null-able, it is returned as-is.
+            </summary>
+            <param name="type">The type to get the concrete type of.</param>
+            <returns>The type's concrete type.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.IsAscii(System.String)">
+            <summary>
+            Gets a value indicating whether the given string is all ASCII.
+            </summary>
+            <param name="value">The string to check.</param>
+            <returns>True if the string contains only ASCII characters, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.IsCollection(System.Type)">
+            <summary>
+            Gets a value indicating whether the specified type is a collection type.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>True if the type is a collection type, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.IsDefaultValue(System.Type,System.Object)">
+            <summary>
+            Gets a value indicating whether the given value is the default value for the specified type.
+            </summary>
+            <param name="type">The type to check the value against.</param>
+            <param name="value">The value to check.</param>
+            <returns>True if the value is the default value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.IsPrimitiveOrEnum(System.Type)">
+            <summary>
+            Gets a value indicating whether the specified type is an enum or primitive or semi-primitive (e.g., string) type.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>True if the type is an enum or primitive type, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.ToBinaryString(System.Byte)">
+            <summary>
+            Converts the given value into its binary representation as a string.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>The value's binary representation as a string.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.Extensions.ToBinaryString(System.Int32)">
+            <summary>
+            Converts the given value into its binary representation as a string.
+            </summary>
+            <param name="value">The value to convert.</param>
+            <returns>The value's binary representation as a string.</returns>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.IPlistSerializable">
+            <summary>
+            Defines the interface for proxy serialization with <see cref="T:System.Runtime.Serialization.Plists.BinaryPlistReader"/> and <see cref="T:System.Runtime.Serialization.Plists.BinaryPlistWriter"/>.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.IPlistSerializable.FromPlistDictionary(System.Collections.IDictionary)">
+            <summary>
+            Populates this instance from the given plist <see cref="T:System.Collections.IDictionary"/> representation.
+            Note that nested <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/> objects found in the graph during
+            <see cref="M:System.Runtime.Serialization.Plists.IPlistSerializable.ToPlistDictionary"/> are represented as nested <see cref="T:System.Collections.IDictionary"/> instances here.
+            </summary>
+            <param name="plist">The plist <see cref="T:System.Collections.IDictionary"/> representation of this instance.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.IPlistSerializable.ToPlistDictionary">
+            <summary>
+            Gets a plist-friendly <see cref="T:System.Collections.IDictionary"/> representation of this instance.
+            The returned dictionary may contain nested implementations of <see cref="T:System.Runtime.Serialization.Plists.IPlistSerializable"/>.
+            </summary>
+            <returns>A plist-friendly <see cref="T:System.Collections.IDictionary"/> representation of this instance.</returns>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.TypeCacheItem">
+            <summary>
+            Represents a cached type used during serialization by a <see cref="T:System.Runtime.Serialization.Plists.DataContractBinaryPlistSerializer"/>.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.TypeCacheItem.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the TypeCacheItem class.
+            </summary>
+            <param name="type">The type to cache.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.TypeCacheItem.InitializeFields">
+            <summary>
+            Initializes this instance's field-related properties.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.TypeCacheItem.InitializeProperties">
+            <summary>
+            Initializes this instance's property-related properties.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.TypeCacheItem.FieldMembers">
+            <summary>
+            Gets the collection of concrete or simulated <see cref="T:System.Runtime.Serialization.DataMemberAttribute"/>s for the type's fields.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.TypeCacheItem.Fields">
+            <summary>
+            Gets a collection of the type's fields.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.TypeCacheItem.Properties">
+            <summary>
+            Gets a collection of the type's properties.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Serialization.Plists.TypeCacheItem.PropertyMembers">
+            <summary>
+            Gets a collection of concrete or simulated <see cref="T:System.Runtime.Serialization.DataMemberAttribute"/>s for the type's properties.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.Serialization.Plists.UniqueValueCache">
+            <summary>
+            Provides a cache of unique primitive values when writing a binary plist.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.Boolean)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.Int64)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.Single)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.Double)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.DateTime)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.Contains(System.String)">
+            <summary>
+            Gets a value indicating whether the cache contains the given value.
+            </summary>
+            <param name="value">The value to check for.</param>
+            <returns>True if the cache contains the value, false otherwise.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.Boolean)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.Int64)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.Single)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.Double)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.DateTime)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.GetIndex(System.String)">
+            <summary>
+            Gets the index in the object table for the given value, assuming it has already been added to the cache.
+            </summary>
+            <param name="value">The value to get the index of.</param>
+            <returns>The index of the value.</returns>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.Boolean,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.Int64,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.Single,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.Double,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.String,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+        <member name="M:System.Runtime.Serialization.Plists.UniqueValueCache.SetIndex(System.DateTime,System.Int32)">
+            <summary>
+            Sets the index in the object table for the given value.
+            </summary>
+            <param name="value">The value to set the index for.</param>
+            <param name="index">The index to set.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,32 @@
+Siri Server Started, Let's Rock'n Roll!
+ 
+Server: 1 Keys Loaded.
+[186.255.144.239:49404] Server: This is Thread #1
+[186.255.144.239:49404] Server: Connected.
+[186.255.144.239:49404] Client: Host: eduardo.sirified.com
+[186.255.144.239:49404] Client: User-Agent: Assistant(iPhone/iPhone3,1; iPhone OS/5.0.1/9A405) Ace/1.0
+[186.255.144.239:49404] Client: Content-Length: 2000000000
+[186.255.144.239:49404] Client: X-Ace-Host: 6f3161b5-a08b-499d-b6a1-69934a7f7ce7
+[186.255.144.239:49404] Client: Siri Capable: False
+[186.255.144.239:49404] Client: AACCEE02
+[186.255.144.239:49404] Client: LoadAssistant
+[186.255.144.239:49404] Client: DestroyAssistant
+[186.255.144.239:49404] Server: "X-ACE-HOST" Replaced.
+[186.255.144.239:49404] Server: "sessionValidationData" Replaced.
+[186.255.144.239:49404] Apple: Server: Apache-Coyote/1.1
+[186.255.144.239:49404] Apple: Date: Mon, 13 Feb 2012 16:08:43 GMT
+[186.255.144.239:49404] Apple: Connection: close
+[186.255.144.239:49404] Apple: AACCEE02
+[186.255.144.239:49404] Apple: SetActivationToken
+[186.255.144.239:49404] Apple: AssistantLoaded
+[186.255.144.239:49404] Apple: SetConnectionHeader
+[186.255.144.239:49404] Apple: AssistantDestroyed
+[186.255.144.239:49404] Client: CommandIgnored
+[46.126.240.72:49482] Server: This is Thread #2
+[46.126.240.72:49482] Server: Connected.
+[46.126.240.72:49482] Client: Host: sirihacks.sirified.com
+[46.126.240.72:49482] Client: User-Agent: Assistant(iPhone/iPhone3,1; iPhone OS/5.0.1/9A405) Ace/1.0
+[46.126.240.72:49482] Client: Content-Length: 2000000000
+[46.126.240.72:49482] Client: X-Ace-Host: a543ad57-f841-419f-abf8-ba7e665ddaef
+[46.126.240.72:49482] Client: Siri Capable: False
+[186.255.144.239:49404] Server: Timed out.
